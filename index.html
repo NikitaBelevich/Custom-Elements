@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+<link rel="stylesheet" href="css/main-style.css">
+<title>Custom Elements</title>
+
+</head>
+
+<body>
+    
+    
+    <div>
+        <p>
+            <b>Создайте элемент live-timer, показывающий текущее время:</b>
+            <ol>
+                <li>Должен тикать (обновляться) каждую секунду.</li>
+                <li>На каждом тике должно генерироваться пользовательское событие с именем tick, содержащее текущую дату в event.detail</li>
+            </ol>
+        </p>
+        <div class="task1">
+            <live-timer id="live-timer1" datetime=""
+            year="" month="" day=""
+            hour="numeric" minute="numeric" second="numeric"
+            time-zone-name=""></live-timer>
+        </div>
+    </div>
+
+    <script src="/js/app.js" defer></script>
+</body>
+
+</html>
