@@ -83,5 +83,22 @@ const timer1 = document.querySelector('#live-timer1');
 
 
 
-
-
+const buttonShadowRoot = document.querySelector('.button-shadow-root');
+// Сделали элементу теневой DOM
+buttonShadowRoot.attachShadow({mode: 'open'});
+/*
+    buttonShadowRoot.shadowRoot это входная точка в наш Shadow DOM, это как document,
+    только наш собственный, привязанный к имеющемуся элементу.
+    Из него мы можем получать элементы и панипулировать ими используя все доступные 
+    методы из обычного DOM
+*/
+// Ссылка на Shadow DOM вынесена в эту переменную
+const buttonShadowRootOM = buttonShadowRoot.shadowRoot;
+// Мы можем создать подэлементы внутри shadowRoot с помощью innerHTML или других методов DOM.
+buttonShadowRootOM.innerHTML = `
+                <div class="button-wrapper">
+                    <div class="custom-button">Click</div>
+                </div>
+`;
+// Можем получать из нашего окружения любые элементы которые в нём есть
+let buttonShadow = buttonShadowRootOM.querySelector('.custom-button');
