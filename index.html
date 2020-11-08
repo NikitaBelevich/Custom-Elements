@@ -32,6 +32,23 @@
 
     <div class="button-shadow-root"></div>
 
+    <button class="actTemp">Activate template</button>
+
+    <template class="tmp1">
+        <h3 class="desc"></h3>
+
+        <style>
+            .desc {
+                color: rgb(175, 16, 180);
+            }
+        </style>
+        
+        <script>
+            const h3Desc = document.querySelector('.desc');
+            h3Desc.textContent = 'Hello from template!';
+        </script>
+    </template>
+
     <script src="/js/app.js" defer></script>
 </body>
 

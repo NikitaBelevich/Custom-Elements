@@ -102,3 +102,10 @@ buttonShadowRootOM.innerHTML = `
 `;
 // Можем получать из нашего окружения любые элементы которые в нём есть
 let buttonShadow = buttonShadowRootOM.querySelector('.custom-button');
+
+
+const tm = document.querySelector('.tmp1');
+const btnActivateTemp = document.querySelector('.actTemp');
+btnActivateTemp.addEventListener('click', () => {
+    document.body.append(tm.content.cloneNode(true));
+}, {once: true});
